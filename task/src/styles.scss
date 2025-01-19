@@ -1,0 +1,13 @@
+/* PRIME-NG STYLES */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+/* MAIN STYLES */
+@import "./assets/styles/main.scss";
+
+
+/* TAILWIND SETUP */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

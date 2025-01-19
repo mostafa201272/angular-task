@@ -1,0 +1,101 @@
+@import "common";
+
+/* START OF FORM INPUTS */
+.form-input {
+  height: toRem(48);
+  width: 100%;
+  padding: toRem(12) toRem(24);
+  border-radius: toRem(6);
+  background-color: #f9feff;
+  border: toRem(1) solid #bcbec9;
+  box-shadow: none;
+
+  &-password {
+    .p-password,
+    .p-password input {
+      width: 100%;
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+  }
+
+  &-textarea {
+    border-radius: toRem(24);
+    height: auto;
+  }
+
+  &-date {
+    .p-inputtext {
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+  }
+
+  &-dropdown {
+    .p-dropdown-label {
+      padding: 0;
+    }
+  }
+
+  &-radio {
+    .p-radiobutton-box {
+      background-color: #f9feff;
+      border: toRem(2) solid #bcbec9;
+      outline: none;
+    }
+
+    .p-radiobutton-box.p-highlight {
+      border-color: $secondary-color;
+
+      .p-radiobutton-icon {
+        background-color: $secondary-color;
+        width: toRem(8);
+        height: toRem(8);
+      }
+    }
+  }
+
+  &-checkbox {
+    .p-checkbox-box {
+      background-color: #f9feff;
+      border: toRem(2) solid #949bbe;
+      outline: none;
+    }
+
+    &-label.p-checkbox-label {
+      color: $secondary-color;
+      font-size: toRem(16);
+      font-weight: bold;
+      margin: 0 toRem(24);
+      text-transform: capitalize;
+    }
+    .p-checkbox-box.p-highlight {
+      border-color: $primary-color;
+      background-color: $primary-color;
+    }
+  }
+
+  &-money-with-btns {
+    padding-left: 0;
+    padding-right: 0;
+
+    input {
+      &:focus,
+      &:active {
+        box-shadow: none;
+        background-color: transparent;
+        outline: none;
+      }
+    }
+  }
+}
+/* END OF FORM INPUTS */
+
+/* START OF FORM MEDIA QUIRES */
+@media (max-width: 480px) {
+  .form-input-checkbox-label.p-checkbox-label {
+    font-size: toRem(12);
+    font-weight: 500;
+  }
+}
+/* END OF FORM MEDIA QUIRES */

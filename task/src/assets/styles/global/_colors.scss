@@ -1,0 +1,63 @@
+/** MAIN COLORS */
+$primary-color: #112EC9;
+$light-primary-color: #1AD6FF;
+$secondary-color: #000A3F;
+$subtitle-color: #575F89;
+$white-color: #fff;
+$danger-color: #FF4040;
+
+// GENERAL COLORs
+$task--primary-color: $primary-color;
+$task--primary-color-text: $primary-color;
+$task--highlight-bg: var(--highlight-bg);
+
+// TEXT COLORs
+$task--text-color: var(--text-color);
+$task--text-color-secondary: var(--text-color-secondary);
+$task--highlight-text-color: var(--highlight-text-color);
+
+
+// SURFACEs COLORs
+$task--surface-a: var(--surface-a);
+$task--surface-b: var(--surface-b);
+$task--surface-c: var(--surface-c);
+$task--surface-d: var(--surface-d);
+$task--surface-e: var(--surface-e);
+$task--surface-f: var(--surface-f);
+$task--surface-0: var(--surface-0);
+$task--surface-50: var(--surface-50);
+$task--surface-100: var(--surface-100);
+$task--surface-200: var(--surface-200);
+$task--surface-300: var(--surface-300);
+$task--surface-400: var(--surface-400);
+$task--surface-500: var(--surface-500);
+$task--surface-600: var(--surface-600);
+$task--surface-700: var(--surface-700);
+$task--surface-800: var(--surface-800);
+$task--surface-900: var(--surface-900);
+$task--surface-ground: var(--surface-ground);
+$task--surface-section: var(--surface-section);
+$task--surface-card: var(--surface-card);
+$task--surface-overlay: var(--surface-overlay);
+$task--surface-border: var(--surface-border);
+$task--surface-hover: var(--surface-hover);
+
+// GRAY SCALE
+$task--gray-50: var(--gray-50);
+$task--gray-100: var(--gray-100);
+$task--gray-200: var(--gray-200);
+$task--gray-300: var(--gray-300);
+$task--gray-400: var(--gray-400);
+$task--gray-500: var(--gray-500);
+$task--gray-600: var(--gray-600);
+$task--gray-700: var(--gray-700);
+$task--gray-800: var(--gray-800);
+$task--gray-900: var(--gray-900);
+
+// GENERAL CONFIGs
+$task--content-padding: var(--content-padding);
+$task--inline-spacing: var(--inline-spacing);
+$task--border-radius: var(--border-radius);
+$task--focus-ring: var(--focus-ring);
+$task--maskbg: var(--maskbg);
+$task--transition-duration: var(--transition-duration);

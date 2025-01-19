@@ -1,0 +1,37 @@
+@import "global/colors";
+
+/* START OF TEXT COLORs */
+.text-secondary {
+  color: $secondary-color !important;
+}
+.text-primary {
+  color: $primary-color !important;
+}
+.text-light-primary {
+  color: $light-primary-color !important;
+}
+.text-subtitle {
+  color: $subtitle-color !important;
+}
+/* END OF TEXT COLORs */
+
+/* START OF BACKGROUNDs COLORs */
+.bg-primary {
+  background-color: $primary-color !important;
+}
+.bg-light-primary {
+  background-color: $light-primary-color !important;
+}
+.bg-secondary {
+  background-color: $secondary-color !important;
+}
+/* END OF BACKGROUNDs COLORs */
+
+
+/* START OF CONTAINERS */
+.forms-container{
+  width: 100%;
+  height: calc(100% - 114px);
+  overflow-y: scroll;
+}
+/* END OF CONTAINERS */

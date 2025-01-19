@@ -1,0 +1,147 @@
+@import "common";
+
+/* START OF BUTTON */
+.btn {
+  min-height: toRem(70);
+  min-width: fit-content;
+  width: fit-content;
+  border-radius: calc(infinity * toRem(1));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: toRem(8);
+  padding: toRem(12) toRem(48);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+
+  &.btn-primary {
+    background-color: $primary-color;
+    background: linear-gradient(
+      163deg,
+      $secondary-color 0%,
+      $primary-color 100%
+    );
+    color: $light-primary-color;
+    cursor: pointer;
+
+    &:disabled {
+      background: none;
+      background-color: $task--gray-300;
+      color: $task--gray-600;
+      border-color: $task--gray-600;
+      cursor: not-allowed;
+    }
+  }
+
+  &.btn-admin-primary {
+    box-shadow: none;
+    background-color: $primary-color;
+    background: linear-gradient(
+      163deg,
+      $secondary-color 0%,
+      $primary-color 100%
+    );
+    color: $white-color;
+    cursor: pointer;
+
+    &:disabled {
+      background: none;
+      background-color: $task--gray-300;
+      color: $task--gray-600;
+      border-color: $task--gray-600;
+      cursor: not-allowed;
+    }
+  }
+
+  &.btn-outline {
+    background-color: transparent;
+    color: $primary-color;
+    border: toRem(3) solid $primary-color;
+
+    &:hover,
+    &:active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+    &:disabled {
+      background-color: transparent;
+      border-color: $task--gray-600;
+      color: $task--gray-600;
+      cursor: not-allowed;
+    }
+
+    &-danger {
+      background-color: transparent;
+      color: $danger-color;
+      border: toRem(3) solid  $danger-color;
+
+      &:hover,
+      &:active {
+        background-color: $danger-color;
+        color: $white-color;
+      }
+      &:disabled {
+        background-color: transparent;
+        border-color: $task--gray-600;
+        color: $task--gray-600;
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &.btn-admin-outline {
+    box-shadow: none;
+    background-color: transparent;
+    color: $primary-color;
+    border: toRem(3) solid $primary-color;
+
+    &:hover,
+    &:active {
+      background-color: $primary-color;
+      color: $white-color;
+    }
+    &:disabled {
+      background-color: transparent;
+      border-color: $task--gray-600;
+      color: $task--gray-600;
+      cursor: not-allowed;
+    }
+  }
+
+  &.btn-link {
+    min-height: auto;
+    border: unset;
+    border-radius: unset;
+    color: $secondary-color;
+    text-decoration: underline;
+    cursor: pointer;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  &.btn-sm {
+    min-height: toRem(48);
+    gap: toRem(8);
+    padding: toRem(4) toRem(16);
+    font-size: toRem(12);
+  }
+
+  &.btn-xs {
+    min-height: toRem(24);
+    gap: toRem(8);
+    padding: toRem(4) toRem(6);
+    border-width: toRem(2);
+    font-size: toRem(12);
+  }
+}
+
+@media (max-width: 768px) {
+  .btn {
+    min-height: toRem(48);
+    gap: toRem(8);
+    padding: toRem(4) toRem(16);
+    font-size: toRem(12);
+  }
+}
+
+/* END OF BUTTON */

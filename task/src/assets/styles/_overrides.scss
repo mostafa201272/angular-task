@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:slnt,wght@-11..11,200..1000&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap");
+@import 'common';
+
+/* START OF GLOBAL STILES */
+[dir="rtl"] *:not(.pi){
+  font-family: "Cairo", sans-serif;
+}
+/* END OF GLOBAL STILES */
+
+/* START OF SCROLL */
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: #ced0d5;
+  border-radius: 15px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* END OF SCROLL */
+
+/* START OF DROPDOWN STILES [PRIME-NG DROPDOWN]*/
+.dropdown-panel {
+  border-radius: toRem(16);
+  overflow: hidden;
+  border: toRem(1) solid #f9feff;
+
+  .p-dropdown-header {
+    background-color: #7480a4;
+    padding: toRem(18) toRem(12);
+
+    .p-dropdown-filter-container input {
+      padding: toRem(6);
+      box-shadow: none;
+    }
+  }
+}
+/* END OF DROPDOWN STILES [PRIME-NG DROPDOWN]*/
+
+/* START OF SLIDER  */
+.p-slider-handle{
+  border: toRem(2) solid $primary-color;
+}
+/* END OF SLIDER  */
+
+/* START OF PAGINATOR STILES [PRIME-NG PAGINATOR] */
+.p-paginator {
+  & > button {
+    margin-left: toRem(2);
+    margin-right: toRem(2);
+  }
+
+  & > button,
+  p-dropdown > div {
+    border: toRem(2) solid $primary-color;
+    border-radius: toRem(8);
+    color: $primary-color;
+
+    .p-dropdown-label {
+      padding-right: toRem(8);
+    }
+  }
+
+  button.p-highlight {
+    border-radius: toRem(8);
+    background-color: $primary-color;
+    color: $white-color;
+  }
+}
+
+.p-paginator-current {
+  margin-left: toRem(88);
+  margin-right: auto;
+  font-family: "Cairo", sans-serif;
+}
+
+html[dir='rtl']{
+  .p-paginator {
+    & > button {
+      rotate: 180deg;
+    }
+  }
+}
+/* END OF PAGINATOR STILES [PRIME-NG PAGINATOR] */
+
+/* START OF PRIME-SLIDER [PRIME-NG CAROUSEL] */
+html[dir='rtl']{
+  .p-carousel-items-container{
+      flex-direction: row-reverse;
+  }
+}
+/* END OF PRIME-SLIDER [PRIME-NG CAROUSEL] */
+
+/* START OF BADGES */
+.badge{
+  padding: toRem(4) toRem(16);
+  border-radius: toRem(8);
+  font-size: toRem(14);
+  font-weight: 600;
+
+  &-completed{
+    background-color: #33B54F;
+    color: #fff;
+  }
+  &-rejected{
+    background-color: #EC4A4A;
+    color: #fff;
+  }
+  &-warning{
+    background-color: #F59A2E;
+    color: #fff;
+  }
+  &-info{
+    background-color: #5EB7E9;
+    color: #fff;
+  }
+  &-default{
+    background-color: #222;
+    color: #fff;
+  }
+
+}
+/* END OF BADGES */
