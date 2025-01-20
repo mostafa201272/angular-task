@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { MessageService } from 'primeng/api';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { LanguageService } from './language.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class HttpService {
   constructor(
     private http: HttpClient,
     private messageService: MessageService,
+    // private languageService: LanguageService
   ) {}
 
   /**
@@ -200,10 +202,29 @@ export class HttpService {
    * @param error
    */
   handleHttpError(error: any): void {
-    this.messageService.add({
-      severity: 'error',
-      summary: error,
-      detail: error?.error?.message
-    });
+    console.error(error);
+    // // HANDEL LIST OF ERRORS
+    // if (error?.error?.errors) {
+    //   for (const e of Object.keys(error?.error?.errors)) {
+    //     for (const msg of error?.error?.errors[e]) {
+    //       // ERROR MESSAGE
+    //       this.messageService.add({
+    //         severity: 'error',
+    //         summary: this.languageService.getTransValue('error'),
+    //         detail: this.languageService.getTransValue(msg)
+    //       });
+    //     }
+    //   }
+    //   return;
+    // }
+
+    // // ERROR ONE ERROR
+    // this.messageService.add({
+    //   severity: 'error',
+    //   summary: this.languageService.getTransValue('error'),
+    //   detail: this.languageService.getTransValue(
+    //     error?.error?.message || error?.error?.ErrorMessage || error?.error?.errorMessage
+    //   )
+    // });
   }
 }

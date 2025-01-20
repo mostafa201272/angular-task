@@ -1,0 +1,27 @@
+<!-- START OF SLIDER -->
+<div>
+  <p-carousel
+    [indicatorsContentClass]="
+      currentLang === 'ar'
+        ? 'prime-indicator-container flex-row-reverse '
+        : 'prime-indicator-container flex-row'
+    "
+    [page]="startPage"
+    [value]="propertyCards"
+    [numScroll]="1"
+    [circular]="false"
+    [showNavigators]="showNavigators"
+    [numVisible]="numOfVisibleCards"
+    [showIndicators]="showIndicators"
+    [responsiveOptions]="responsiveOptions"
+  >
+    <ng-template let-property pTemplate="item">
+      <!-- START OF HOUSE CONTAINER -->
+      <div class="p-4">
+        <house-card [property]="property"></house-card>
+      </div>
+      <!-- END OF HOUSE CONTAINER -->
+    </ng-template>
+  </p-carousel>
+</div>
+<!-- END OF SLIDER -->

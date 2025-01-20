@@ -36,11 +36,31 @@
  *
  */
 
-
 export const MODULES_ROUTES = {
-    home: {
-        name: 'home',
-        route: '/home',
-        label: 'home',
-    }
+  auth: {
+    name: 'auth',
+    route: '/auth',
+    label: 'auth',
+
+    login: {
+      name: 'login',
+      route: '/auth/login',
+      label: 'login',
+    },
+    registration: {
+      name: 'registration',
+      route: '/auth/registration',
+      label: 'registration',
+    },
+  },
+  home: {
+    name: 'home',
+    route: '/home',
+    label: 'home',
+  },
+  visitors: {
+    name: 'visitors',
+    route: '/visitors',
+    label: 'visitors',
+  },
 };

@@ -1,0 +1,62 @@
+@import "common.scss";
+
+:host {
+  ::ng-deep {
+    .p-carousel {
+      position: relative;
+    }
+    .p-carousel-container {
+      .p-carousel-prev,
+      .p-carousel-next {
+        width: toRem(48);
+        height: toRem(48);
+        color: $primary-color;
+        position: absolute;
+        left: toRem(-12);
+        right: auto;
+        transform: translate(0, -50%);
+        z-index: 1;
+        background-color: $white-color;
+        box-shadow: toRem(0) toRem(0) toRem(3) toRem(-1) #000;
+      }
+
+      .p-carousel-prev {
+        top: 40%;
+      }
+
+      .p-carousel-next {
+        top: 50%;
+      }
+    }
+
+    .prime-indicator-container .prime-indicator {
+      width: toRem(10);
+      height: 10px;
+      border-radius: 50%;
+      background-color: $subtitle-color;
+    }
+
+    .p-carousel
+      .p-carousel-indicators
+      .p-carousel-indicator.p-highlight
+      .prime-indicator {
+      background-color: $primary-color;
+    }
+  }
+}
+
+:host-context([dir="rtl"]) {
+  ::ng-deep {
+    .p-carousel-items-container {
+      flex-direction: row-reverse;
+    }
+
+    .p-carousel-container {
+      .p-carousel-prev,
+      .p-carousel-next {
+        right: toRem(-12);
+        left: auto;
+      }
+    }
+  }
+}

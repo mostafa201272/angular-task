@@ -1,0 +1,52 @@
+@import "common.scss";
+
+:host {
+  ::ng-deep {
+    .profile-menu-container {
+      box-shadow: none;
+      border: toRem(1) solid #cfcfcf;
+      padding: toRem(16);
+      top: toRem(50) !important;
+      left: auto !important;
+      right: 0 !important;
+
+      .p-overlaypanel-content {
+        padding: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: toRem(-8);
+        right: toRem(18);
+        left: auto;
+        width: toRem(15);
+        height: toRem(15);
+        rotate: 45deg;
+        background-color: $white-color;
+        border: toRem(1) solid #cfcfcf;
+        border-bottom: 0;
+        border-right: 0;
+        z-index: -1;
+      }
+    }
+
+    .p-avatar-image{
+      border: toRem(2) solid $primary-color;
+    }
+  }
+}
+
+:host-context([dir="rtl"]) {
+  ::ng-deep {
+    .profile-menu-container {
+      left: 0 !important;
+      right: auto !important;
+      
+      &::before {
+        left: toRem(24);
+        right: auto;
+      }
+    }
+  }
+}

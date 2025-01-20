@@ -1,0 +1,59 @@
+<!-- START OF NAVBAR -->
+<nav class="w-full py-2 px-4 bg-white sticky top-0 left-0 rounded-lg z-50">
+  <!-- START OF NAVBAR ITEMS CONTAINER -->
+  <div class="flex flex-row items-center justify-between gap-4">
+    <!-- START OF NAVBAR ITEMS -->
+    <div class="flex flex-row gap-4 items-center">
+      <!-- START OF SEARCH INPUT -->
+      <div class="relative">
+        <i
+          class="pi pi-search flex text-base text-subtitle absolute top-2.5 ltr:left-2 rtl:right-2"
+        ></i>
+        <input
+          type="text"
+          pInputText
+          class="form-input ltr:pl-7 rtl:pr-7 md:min-w-48 lg:min-w-80"
+          placeholder="Search..."
+        />
+      </div>
+      <!-- END OF SEARCH INPUT -->
+    </div>
+    <!-- END OF NAVBAR ITEMS -->
+
+    <!-- START OF CONTROLS -->
+    <div class="flex flex-row gap-4 items-center">
+      <!-- START OF NOTIFICATIONS -->
+      <div class="relative">
+        <span>
+          <i class="pi pi-bell flex text-primary text-3xl cursor-pointer"></i>
+        </span>
+        <span
+          class="text-xs absolute top-0 right-0 w-4 h-4 rounded-full bg-red-600"
+        ></span>
+      </div>
+      <!-- END OF NOTIFICATIONS -->
+
+      <!-- START OF PROFILE -->
+      <app-profile [coloredNavbar]="true" [showHome]="true"></app-profile>
+      <!-- END OF PROFILE -->
+      <!--START OF LANGUAGE SWITCH  -->
+      <button
+        (click)="switchLanguage()"
+        class="flex flex-row items-center gap-2"
+      >
+        <span><i class="pi pi-language flex text-primary"></i></span>
+        <span
+          class="text-white font-semibold leading-normal font-[Cairo] text-primary"
+        >
+          {{
+            (currentLang === "ar" ? "language.en" : "language.ar") | translate
+          }}</span
+        >
+      </button>
+      <!--END OF LANGUAGE SWITCH  -->
+    </div>
+    <!-- END OF CONTROLS -->
+  </div>
+  <!-- END OF NAVBAR ITEMS CONTAINER -->
+</nav>
+<!-- END OF NAVBAR -->

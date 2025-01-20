@@ -1,0 +1,107 @@
+{
+  "navbar": {
+    "home": "Home",
+    "blog": "Blog",
+    "sell": "Sell",
+    "buy": "Buy",
+    "contact": "Contact Us"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "blog": "Blog",
+    "sell": "Sell",
+    "buy": "Buy",
+    "privacy": "Privacy and policy",
+    "services": "Services",
+    "newHomes": "New Homes",
+    "ourServices": "Our Services",
+    "terms": "Terms and conditions",
+    "homes": "Homes",
+    "contact": "Contact Us",
+    "phone": "Phone",
+    "sales": "Sales",
+    "whatsApp": "WhatsApp",
+    "email": "Email",
+    "copyRight": "All rights reserved to Buhrah 2024"
+  },
+  "contact": {
+    "mail": "turky@gmail.com"
+  },
+  "language":{
+    "ar": "العربية",
+    "en": "EN"
+  },
+  "profile":{
+    "profile": "Profile",
+    "home": "Home",
+    "settings": "Settings",
+    "signIn": "Sign in",
+    "signUp": "Sign up",
+    "signOut": "Sign out"
+  },
+  "btn": {
+    "add": "Add",
+    "viewMoreBlogs": "View More Blogs",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "create": "Create",
+    "update": "Update",
+    "delete": "Delete",
+    "view": "View",
+    "assign": "Assign",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "clear": "Clear",
+    "changePassword": "Change Password",
+    "save": "Save",
+    "confirm": "Confirm",
+    "edit": "Edit",
+    "ok": "Ok",
+    "done": "Done",
+    "pending": "Pending",
+    "cancel": "Cancel",
+    "apply": "Apply",
+    "download": "Download",
+    "submit": "Submit",
+    "replayed": "Replayed",
+    "share": "Share",
+    "readMore": "Read More",
+    "requestCall": "Request Call",
+    "send": "Send"
+  },
+  "messages": {
+    "success": "Successfully",
+    "error": "Error",
+    "requestReceivedSuccessfully": "Request Received Successfully",
+    "actionSuccessfully": "Action Successfully"
+  },
+  "table": {
+    "tableOptions": "Table Options",
+    "tableActions": "Actions",
+    "downloadExcel": "Download Excel",
+    "pageReportTemplate": "Showing {{first}} to {{last}} of {{totalRecords}} | Records/Page"
+  },
+  "status":{
+    "pending": "Pending",
+    "replayed": "Reply",
+    "done": "Done",
+    "available"  : "Available",
+    "sold": "Sold",
+    "active": "Active",
+    "inactive": "Inactive"
+  },
+  "inputs": {
+    "chooseFile": "Choose File",
+    "imagesAndPdf": "Images & PDF",
+    "images": "Images",
+    "fileMaxSize": "Max Size"
+  },
+  "currencies": {
+    "sr": "SR"
+  },
+  "areas": {
+    "m": "m"
+  }
+}

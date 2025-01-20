@@ -1,0 +1,17 @@
+:host {
+  .menuOpened {
+    width: calc(100% - 316px);
+  }
+  .menuClosed {
+    width: calc(100% - 96px);
+  }
+
+  @media (max-width: 768px) {
+    .menuOpened {
+        width: calc(100% - 16px);
+      }
+      .menuClosed {
+        width: calc(100% - 16px);
+      }  
+  }
+}

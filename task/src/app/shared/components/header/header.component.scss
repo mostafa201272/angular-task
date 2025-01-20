@@ -1,0 +1,10 @@
+@import 'common.scss';
+
+:host{
+    .header-overlay.colored{
+        background: linear-gradient(165deg, rgba(0,0,0,1) 0%, rgba(19,99,219,0.6) 60%, rgba(17,46,201,1) 100%);
+    }
+    .header-overlay.white{
+        background-color: rgba($color: #fff, $alpha: 0.7);
+    }
+}

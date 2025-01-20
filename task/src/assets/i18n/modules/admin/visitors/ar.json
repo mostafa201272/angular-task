@@ -1,0 +1,80 @@
+{
+  "admin": {
+    "visitors": {
+      "common": {
+        "id": "المعرف",
+        "name": "الإسم",
+        "phone": "الجوال",
+        "title": "العنوان بالإنجليزية",
+        "title_en": "العنوان بالإنجليزية",
+        "title_ar": "العنوان بالعربية",
+        "name_english": "العنوان بالإنجليزية",
+        "name_arabic": "العنوان بالعربية",
+        "subtitle": "العنوان الفرعى بالإنجليزية",
+        "subtitle_ar": "العنوان الفرعى بالعربية",
+        "description_ar": "الوصف بالعربية",
+        "description": "الوصف بالإنجليزية",
+        "short_description_en": "الوصف القصير بالإنجليزية",
+        "short_description_ar": "الوصف القصير بالعربية",
+        "long_description_en": "الوصف الطويل بالإنجليزية",
+        "long_description_ar": "الوصف الطويل بالعربية",
+        "first_description_en": "الوصف الأول (أجنبى)",
+        "first_description_ar": "الوصف الأول (عربى)",
+        "second_description_en": "الوصف الثانى (أجنبى)",
+        "second_description_ar": "الوصف الثانى (عربى)",
+        "property": "الوحدة",
+        "call_date": "تاريخ المكالمة",
+        "call_time_range": "نطاق وقت المكالمة",
+        "requestCall": "طلب مكالمة",
+        "video_code": "كود الفديو",
+        "video_url": "رابط الفديو",
+        "background_image": "صورة الخلفية",
+        "image": "الصورة",
+        "header_image": "صورة الغلاف",
+        "status": "الحالة",
+        "created_at": "وقت الإنشاء",
+        "updated_at": "أخر تحديث"
+      },
+      "home": {
+        "id": "المعرف",
+        "title": "العنوان بالإنجليزية",
+        "title_ar": "العنوان بالعربية",
+        "subtitle": "العنوان الفرعى بالإنجليزية",
+        "subtitle_ar": "العنوان الفرعى بالعربية",
+        "description_ar": "الوصف بالعربية",
+        "description": "الوصف بالإنجليزية",
+        "video_code": "كود الفديو",
+        "video_url": "رابط الفديو",
+        "background_image": "صورة الخلفية",
+        "image": "الصورة",
+        "status": "الحالة",
+        "created_at": "وقت الإنشاء",
+        "updated_at": "أخر تحديث"
+      }
+    },
+    "requests": {
+      "financeSolutionRequests": {
+        "id": "المعرف",
+        "fullName": "الإسم بالكامل",
+        "birthDate": "تاريخ الميلاد",
+        "phone": "الهاتف",
+        "email": "البريد الإلكترونى",
+        "sector": "قطاع",
+        "totalSalary": "المرتب الإجمالى",
+        "netSalary": "الراتب الصافي",
+        "residentialSubsidy": "إعانة سكنية",
+        "replyMethod": "طريقة الرد",
+        "status": "الحالة",
+        "created_at": "وقت الإنشاء",
+        "updated_at": "أخر تحديث",
+        "whatsApp": "واتس اب",
+        "whatsapp": "واتس اب",
+        "obligations": "الالتزامات",
+        "governmental": "حكومي",
+        "private": "خاص",
+        "supported": "مدعوم",
+        "not_supported": "غير مدعوم"
+      }
+    }
+  }
+}

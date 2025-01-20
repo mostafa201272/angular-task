@@ -1,0 +1,24 @@
+<!-- START OF BREADCRUMB -->
+<p-breadcrumb class="max-w-full" [model]="(breadcrumbItems$ | async) || []" [home]="breadCrumbRoot">
+    <!-- START OF SEPARATOR TEMPLATE -->
+    <ng-template pTemplate="separator">
+      <!-- RTL SEPARATOR -->
+      <span class="rtl:flex ltr:hidden"
+        ><i
+          class="pi pi-angle-left"
+          style="font-size: 1rem; font-weight: bold"
+        ></i
+      ></span>
+  
+      <!-- LTR SEPARATOR -->
+      <span class="ltr:flex rtl:hidden"
+        ><i
+          class="pi pi-angle-right"
+          style="font-size: 1rem; font-weight: bold"
+        ></i
+      ></span>
+    </ng-template>
+    <!-- END OF SEPARATOR TEMPLATE -->
+  </p-breadcrumb>
+  <!-- END OF BREADCRUMB -->
+  

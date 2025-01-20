@@ -1,0 +1,38 @@
+@import "common.scss";
+
+:host{
+  ::ng-deep{
+    .p-breadcrumb {
+      width: fit-content;
+      border: 0 solid transparent;
+      padding: 0;
+      font-size: toRem(16);
+      font-weight: 600;
+      background-color: transparent;
+    }
+
+    .p-breadcrumb ol{
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .p-breadcrumb ol li .p-menuitem-link .p-menuitem-text{
+      padding-top: toRem(10);
+      padding-bottom: toRem(10);
+    }
+
+    .p-breadcrumb ol li .p-menuitem-link .p-menuitem-text,
+    .p-breadcrumb ol li.p-breadcrumb-chevron,
+    .p-breadcrumb ol li .p-menuitem-link .p-menuitem-icon {
+      color: $primary-color;
+    }
+
+    .p-breadcrumb .p-breadcrumb-list li:last-child .p-menuitem-text{
+      color: $secondary-color;
+    }
+
+  }
+
+  
+}

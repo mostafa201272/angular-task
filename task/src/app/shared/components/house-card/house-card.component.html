@@ -1,0 +1,72 @@
+<!-- START OF HOUSE CONTAINER -->
+<div class="flex flex-col gap-4 w-full cursor-pointer">
+  <!-- START OF HOUSE VIEW -->
+  <div class="w-full h-80 rounded-2xl overflow-hidden">
+    <p-galleria
+        [value]="property.images"
+        [numVisible]="5"
+        [circular]="true"
+        [autoPlay]="true"
+        [showItemNavigators]="true"
+        [showThumbnails]="false"
+        [containerClass]="'house-images-container'"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img [routerLink]="'/buy/' + property.encId" class="w-full h-full object-cover" [src]="item" [alt]="property.title"/>
+        </ng-template>
+      </p-galleria>
+  </div>
+  <!-- END OF HOUSE VIEW -->
+
+  <!-- START OF HOUSE DETAILS -->
+  <div class="flex flex-col gap-2" [routerLink]="'/buy/' + property.encId">
+    <!-- START OF LOCATION -->
+    <div class="flex flex-row gap-1 items-center">
+      <span class="flex"
+        ><i class="pi pi-map-marker text-subtitle text-base font-semibold"></i
+      ></span>
+      <span class="text-subtitle text-base font-semibold">{{currentLang === 'ar'? property.location_ar : property.location_en}}</span>
+    </div>
+    <!-- END OF LOCATION -->
+
+    <!-- START OF PRICE -->
+    <div>
+      <h2 class="text-primary text-xl font-bold">{{property.price}} {{ 'sar' | translate}}</h2>
+    </div>
+    <!-- END OF PRICE -->
+
+    <!-- START OF AREA -->
+    <div>
+      <span class="text-subtitle text-base font-semibold"
+        >{{property.total_area}} m²/ {{property.title}}</span
+      >
+    </div>
+    <!-- END OF AREA -->
+
+    <!-- START OF SERVICE -->
+    <div
+      class="flex flex-row gap-4 border-t border-dashed border-[#D3D6E4] pt-2"
+    >
+      <!-- START OF ITEM 1 -->
+      <div class="flex flex-row gap-2">
+        <span class="text-subtitle text-base font-semibold"
+          ><i class="pi pi-clock"></i
+        ></span>
+        <span class="text-subtitle text-base font-semibold">{{property.total_bedrooms}} bedrooms</span>
+      </div>
+      <!-- END ITEM 1 -->
+
+      <!-- START OF ITEM 1 -->
+      <div class="flex flex-row gap-2">
+        <span class="text-subtitle text-base font-semibold"
+          ><i class="pi pi-clock"></i
+        ></span>
+        <span class="text-subtitle text-base font-semibold">{{property.total_bathrooms}} bathrooms</span>
+      </div>
+      <!-- END ITEM 1 -->
+    </div>
+    <!-- END OF SERVICE -->
+  </div>
+  <!-- END OF HOUSE DETAILS -->
+</div>
+<!-- END OF HOUSE CONTAINER -->

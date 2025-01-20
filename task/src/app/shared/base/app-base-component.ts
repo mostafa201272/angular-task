@@ -7,9 +7,15 @@ import { MessageService } from 'primeng/api';
 import { DialogService } from 'primeng/dynamicdialog';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { HttpService } from '../../core/services/http.service';
-import { MODULES_ROUTES } from '../../../utilities/routers';
-
+import { HttpService } from 'src/app/core/services/http.service';
+import { LanguageService } from 'src/app/core/services/language.service';
+import { StorageService } from 'src/app/core/services/storage.service';
+import {
+  GLOBAL_TABLE_TIME_FORMATE,
+  REGEX_FORMATS,
+} from 'src/utilities/pre-defines';
+import { MODULES_ROUTES } from 'src/utilities/routers';
+import * as XLSX from 'xlsx';
 
 @Component({
   template: '',
@@ -20,21 +26,43 @@ export abstract class AppBase implements OnDestroy {
   translateService = inject(TranslateService);
   httpService = inject(HttpService);
   formBuilder = inject(FormBuilder);
+  languageService = inject(LanguageService);
   datePipe = inject(DatePipe);
   router = inject(Router);
   activeRoute = inject(ActivatedRoute);
   messageService = inject(MessageService);
   dialogService = inject(DialogService);
+  storageService = inject(StorageService);
 
   // SUBSCRIPTION HANDLER
   protected unsubscribeAll: Subject<void> = new Subject<void>();
 
+  // LANGUAGE
+  currentLang: string = this.languageService.getCurrentLang();
+
   // MODULES ROUTERS HOLDER
   protected MODULES_ROUTERS = MODULES_ROUTES;
+
+  // REGEX HOLDER
+  REGEX = REGEX_FORMATS;
 
   // FOR FORMS
   isSubmit = false;
   form!: FormGroup;
+
+  constructor() {
+    this.translateService.onLangChange
+      .pipe(this.takeUntilDestroyed())
+      .subscribe({
+        next: (currentLang: any) => {
+          this.currentLang = currentLang.lang;
+          this.refresh();
+        }
+      });
+  }
+
+  // REFRESH
+  refresh(): void {}
 
   // LOAD FORM CONTROLS
   loadForm(controls: { [key: string]: any }): void {
@@ -62,6 +90,15 @@ export abstract class AppBase implements OnDestroy {
   // ON SUBMIT FORM
   onSubmit(): void {}
 
+  /**
+   * Transforms a date string into a formatted date and time string using the Angular DatePipe.
+   *
+   * @param {string} date - The date string to be transformed.
+   * @returns {string} The transformed date and time string.
+   */
+  transformTableDate(date: string): string {
+    return this.datePipe.transform(date, GLOBAL_TABLE_TIME_FORMATE) || date;
+  }
 
   /**
    * TRANSFORM DATE TO CUSTOM FORMATE
@@ -73,6 +110,17 @@ export abstract class AppBase implements OnDestroy {
     return this.datePipe.transform(date, formate);
   }
 
+  /**
+   * GENERATE HIJRI DATE
+   *
+   * @param {any} date - The date string to be transformed.
+   * @returns {string} The transformed date and time string.
+   */
+  generateHijriDate(date: any): string {
+    return date
+      ? `${date?.toString().slice(6, 8)}/${date?.toString().slice(4, 6)}/${date?.toString().slice(0, 4)}`
+      : '';
+  }
 
   /**
    * RETURN OBJECT WITHOUT NULLABLE DATA
@@ -147,7 +195,21 @@ export abstract class AppBase implements OnDestroy {
     return JSON.parse(JSON.stringify(array));
   }
 
-  
+   
+  /**
+   * CREATE AND DOWNLOAD EXCEL FILE
+   */
+  createAndDownloadExcelFile(
+    data: any,
+    sheet_name = 'sheet',
+    file_name = 'book.xlsx'
+  ) {
+    const worksheet = XLSX.utils.json_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheet_name);
+    XLSX.writeFile(workbook, file_name);
+  }
+
   ngOnDestroy(): void {
     this.unsubscribeAll.next();
     this.unsubscribeAll.complete();

@@ -1,0 +1,22 @@
+<!-- START OF ADMIN LAYOUT CONTAINER -->
+<section class="flex flex-row gap-4 h-screen w-full relative bg-[#F0F6F9] p-4">
+  <!-- START OF SIDEBAR -->
+  <admin-sidebar (toggleMenu)="toggleMenuEvent($event)"></admin-sidebar>
+  <!-- END OF SIDEBAR -->
+
+  <!-- START OF MAIN CONTAINER -->
+  <div class="relative w-full flex flex-col gap-4" [ngClass]="{'menuOpened': isMenuOpened, 'menuClosed': !isMenuOpened}">
+    <!-- START OF HEADER -->
+    <admin-navbar></admin-navbar>
+    <!-- END OF HEADER -->
+
+    <!-- START OF MAIN AREA -->
+    <main class="h-full w-full overflow-y-scroll">
+      <p-toast></p-toast>
+      <router-outlet></router-outlet>
+    </main>
+    <!-- END OF MAIN AREA -->
+  </div>
+  <!-- END OF MAIN CONTAINER -->
+</section>
+<!-- END OF ADMIN LAYOUT CONTAINER -->

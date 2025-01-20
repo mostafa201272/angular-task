@@ -1,0 +1,47 @@
+{
+  "visitors": {
+    "common": {
+      "headerLabel": "ابحث عن عقارك الاستثنائي مع",
+      "buhrah": "بهره",
+      "bedrooms": "غرف نوم",
+      "bathrooms": "حمامات",
+      "total_area": "المساحة الكلية",
+      "discoverNewHomes": "إستكشف منازل جديده",
+      "fullName": "الاسم الكامل",
+      "birthDate": "تاريخ الميلاد",
+      "phone": "الهاتف",
+      "whatsApp": "واتس اب",
+      "email": "البريد الإلكتروني",
+      "sector": "القطاع",
+      "totalSalary": "إجمالي الراتب",
+      "netSalary": "صافي الراتب",
+      "residentialSubsidy": "إعانة السكن",
+      "obligations": "الالتزامات",
+      "replyMethod": "طريقة الرد",
+      "governmental": "حكومي",
+      "private": "خاص",
+      "supported": "مدعوم",
+      "not_supported": "غير مدعوم"
+    },
+    "home": {
+      "headerLabel": "ابحث عن عقارك الاستثنائي مع",
+      "buhrah": "بهره",
+      "discoverNewHomes": "إستكشف منازل جديده",
+      "fullName": "الاسم الكامل",
+      "birthDate": "تاريخ الميلاد",
+      "phone": "الهاتف",
+      "whatsApp": "واتس اب",
+      "email": "البريد الإلكتروني",
+      "sector": "القطاع",
+      "totalSalary": "إجمالي الراتب",
+      "netSalary": "صافي الراتب",
+      "residentialSubsidy": "إعانة السكن",
+      "obligations": "الالتزامات",
+      "replyMethod": "طريقة الرد",
+      "governmental": "حكومي",
+      "private": "خاص",
+      "supported": "مدعوم",
+      "not_supported": "غير مدعوم"
+    }
+  }
+}

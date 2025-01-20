@@ -1,0 +1,193 @@
+<!-- START OF PROFILE CONTAINER -->
+<div
+  class="flex flex-row gap-3 justify-end items-center relative"
+  #profileMenuContainer
+>
+  @if (isLoggedIn$ | async) {
+  <!-- START OF PROFILE CONTAINER -->
+  <div class="flex flex-row gap-3 justify-end items-center">
+    <!-- START OF PROFILE MENU -->
+    <div class="flex flex-row">
+      <!-- START OF PROFILE MENU -->
+      <p-overlayPanel
+        #profileMenu
+        [styleClass]="'profile-menu-container'"
+        [appendTo]="profileMenuContainer"
+      >
+        <ng-template pTemplate="content">
+          <!-- START OF MENU PROFILE DETAILS -->
+          <div class="flex flex-row gap-4 items-start">
+            <!-- START OF PROFILE AVATAR -->
+            <div>
+              <p-avatar
+                [image]="(user$ | async)?.profile_picture"
+                styleClass="cursor-pointer"
+                size="large"
+                shape="circle"
+              />
+            </div>
+            <!-- END OF PROFILE AVATAR -->
+
+            <!-- START OF PROFILE DETAILS -->
+            <div class="flex flex-col gap-2">
+              <div class="flex flex-col gap-1 cursor-pointer">
+                <!-- START OF OWNER NAME -->
+                <label
+                  [title]="(user$ | async)?.name"
+                  class="font-semibold text-lg text-secondary max-w-40 overflow-hidden whitespace-nowrap text-ellipsis"
+                  >{{ (user$ | async)?.name }}
+                </label>
+                <!-- END OF OWNER NAME -->
+
+                <!-- START OF PROFILE MAIL -->
+                <span
+                  [title]="(user$ | async)?.email"
+                  class="font-normal text-sm text-subtitle max-w-40 overflow-hidden whitespace-nowrap text-ellipsis"
+                  >{{ (user$ | async)?.email }}</span
+                >
+                <!-- END OF PROFILE MAIL -->
+              </div>
+            </div>
+            <!-- END OF PROFILE DETAILS -->
+          </div>
+          <!-- END OF MENU PROFILE DETAILS -->
+
+          <!-- START OF SEPARATOR -->
+          <hr class="w-full bg-gray-400 my-4" />
+          <!-- END OF SEPARATOR -->
+
+          <!-- START OF MENU ITEMS -->
+          <div class="flex flex-col gap-2 w-25rem">
+            <!-- START OF MENU ITEM [HOME]-->
+            <div
+              *ngIf="showHome"
+              [routerLink]="'/'"
+              class="w-full cursor-pointer flex flex-row gap-3 items-center p-1 hover:bg-gray-200 hover:rounded-md hover:px-3 transition-all"
+            >
+              <!-- START OF ICON -->
+              <span class="flex"><i class="pi pi-home"></i></span>
+              <!-- END OF ICON -->
+
+              <!-- START OF MENU ITEM TEXT -->
+              <span class="rtl:font-[Cairo] rtl:font-semibold">{{
+                baseTranslationPoint + "home" | translate
+              }}</span>
+              <!-- END OF MENU ITEM TEXT -->
+            </div>
+            <!-- END OF MENU ITEM [HOME]-->
+
+            <!-- START OF MENU ITEM [PROFILE] -->
+            <div
+              (click)="navigateToProfile()"
+              class="w-full cursor-pointer flex flex-row gap-3 items-center p-1 hover:bg-gray-200 hover:rounded-md hover:px-3 transition-all"
+            >
+              <!-- START OF ICON -->
+              <span class="flex"><i class="pi pi-user"></i></span>
+              <!-- END OF ICON -->
+
+              <!-- START OF MENU ITEM TEXT -->
+              <span class="rtl:font-[Cairo] rtl:font-semibold">{{
+                baseTranslationPoint + "profile" | translate
+              }}</span>
+              <!-- END OF MENU ITEM TEXT -->
+            </div>
+            <!-- END OF MENU ITEM [PROFILE] -->
+
+            <!-- START OF MENU ITEM [SETTINGS]-->
+            <div
+              class="w-full cursor-pointer flex flex-row gap-3 items-center p-1 hover:bg-gray-200 hover:rounded-md hover:px-3 transition-all"
+            >
+              <!-- START OF ICON -->
+              <span class="flex"><i class="pi pi-cog"></i></span>
+              <!-- END OF ICON -->
+
+              <!-- START OF MENU ITEM TEXT -->
+              <span class="rtl:font-[Cairo] rtl:font-semibold">{{
+                baseTranslationPoint + "settings" | translate
+              }}</span>
+              <!-- END OF MENU ITEM TEXT -->
+            </div>
+            <!-- END OF MENU ITEM [SETTINGS]-->
+
+            <!-- START OF SEPARATOR -->
+            <hr class="w-full bg-gray-400" />
+            <!-- END OF SEPARATOR -->
+
+            <!-- START OF MENU ITEM [LOGOUT] -->
+            <div
+              (click)="logout()"
+              class="w-full cursor-pointer flex flex-row gap-3 items-center p-1 hover:bg-gray-200 hover:rounded-md hover:px-3 transition-all"
+            >
+              <!-- START OF ICON -->
+              <span class="flex"><i class="pi pi-sign-out"></i></span>
+              <!-- END OF ICON -->
+
+              <!-- START OF MENU ITEM TEXT -->
+              <span class="rtl:font-[Cairo] rtl:font-semibold">{{
+                baseTranslationPoint + "signOut" | translate
+              }}</span>
+              <!-- END OF MENU ITEM TEXT -->
+            </div>
+            <!-- END OF MENU ITEM [LOGOUT] -->
+          </div>
+          <!-- END OF MENU ITEMS -->
+        </ng-template>
+      </p-overlayPanel>
+      <!-- END OF PROFILE MENU -->
+    </div>
+    <!-- END OF PROFILE MENU -->
+
+    <!-- START OF PROFILE AVATAR -->
+    <div>
+      <p-avatar
+        [image]="(user$ | async)?.profile_picture"
+        styleClass="cursor-pointer"
+        size="large"
+        shape="circle"
+        (click)="profileMenu.toggle($event)"
+      />
+    </div>
+    <!-- END OF PROFILE AVATAR -->
+  </div>
+  <!-- END OF PROFILE CONTAINER -->
+  } @else {
+  <!-- START OF LOGIN/REGISTRATION CONTAINER -->
+  <div class="flex flex-row gap-4 items-center justify-between">
+    <!-- START OF LOGIN ITEM -->
+    <div>
+      <a
+        class="font-semibold text-white"
+        [routerLink]="'/auth/login'"
+        [routerLinkActive]="'text-light-primary'"
+        [ngClass]="{ 'text-secondary': coloredNavbar }"
+        >{{ baseTranslationPoint + "signIn" | translate }}</a
+      >
+    </div>
+    <!-- END OF LOGIN ITEM -->
+
+    <!-- START OF SEPARATOR -->
+    <div>
+      <span
+        class="text-lg font-semibold text-white"
+        [ngClass]="{ 'text-secondary': coloredNavbar }"
+        >|</span
+      >
+    </div>
+    <!-- END OF SEPARATOR -->
+
+    <!-- START OF REGISTRATION ITEM -->
+    <div>
+      <a
+        class="font-semibold text-white"
+        [routerLink]="'/auth/registration'"
+        [routerLinkActive]="'text-light-primary'"
+        [ngClass]="{ 'text-secondary': coloredNavbar }"
+        >{{ baseTranslationPoint + "signUp" | translate }}</a
+      >
+    </div>
+    <!-- END OF REGISTRATION ITEM -->
+  </div>
+  <!-- END OF LOGIN/REGISTRATION CONTAINER -->
+  }
+</div>
+<!-- END OF PROFILE CONTAINER -->

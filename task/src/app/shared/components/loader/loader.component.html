@@ -1,0 +1,27 @@
+<div
+  *ngIf="isVisible"
+  class="loading__page"
+  [ngClass]="{ full_overlay: fullOverlay }"
+>
+  <div class="loading__page__loader">
+    <!-- START OF IMAGE -->
+    <div class="loading__page__loader__image">
+      <img
+        class="w-full"
+        src="/assets/images/logo_colored.svg"
+      />
+    </div>
+    <!-- END OF IMAGE -->
+
+    <!-- START OF LOADING -->
+    <div class="loading__page__loader__section">
+      <div class="loading__page__loader__section__container">
+        <div class="loading__page__loader__section__container__ring"></div>
+        <div class="loading__page__loader__section__container__ring"></div>
+        <div class="loading__page__loader__section__container__ring"></div>
+        <div class="loading__page__loader__section__container__ring"></div>
+      </div>
+    </div>
+    <!-- END OF LOADING -->
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<!-- START OF NAVBAR -->
+<div class="h-24 lg:h-44">
+  <app-nav-bar [coloredNavbar]="true"></app-nav-bar>
+</div>
+<!-- END OF NAVBAR -->
+
+<!-- START OF LAYOUT CONTAINER -->
+<section class="flex flex-col gap-14 justify-between min-h-screen h-screen">
+  <!-- START OF ROUTES CONTENT -->
+  <main class="h-full">
+    <router-outlet></router-outlet>
+  </main>
+  <!-- END OF ROUTES CONTENT -->
+
+  <!-- START OF FOOTER -->
+  <app-footer></app-footer>
+  <!-- END OF FOOTER -->
+</section>
+<!-- END OF LAYOUT CONTAINER -->

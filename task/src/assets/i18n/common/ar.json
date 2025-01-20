@@ -1,0 +1,107 @@
+{
+  "navbar": {
+    "home": "الرئيسية",
+    "blog": "المدونة",
+    "sell": "بيع",
+    "buy": "شراء",
+    "contact": "تواصل معنا"
+  },
+  "footer": {
+    "quickLinks": "روابط سريعة",
+    "home": "الرئيسية",
+    "blog": "المدونة",
+    "sell": "بيع",
+    "buy": "شراء",
+    "privacy": "سياسة الخصوصية",
+    "services": "الخدمات",
+    "newHomes": "أحدث المنازل",
+    "ourServices": "خدماتنا",
+    "terms": "الشرزط والأحكام",
+    "homes": "المنازل",
+    "contact": "تواصل معنا",
+    "phone": "الهاتف",
+    "sales": "المبيعات",
+    "whatsApp": "الواتس اب",
+    "email": "البريد الإلكترونى",
+    "copyRight": "جميع الحقوق محفوظة لشركة بهره 2024"
+  },
+  "contact": {
+    "mail": "turky@gmail.com"
+  },
+  "btn": {
+    "add": "إضافة",
+    "activate": "تفعيل",
+    "viewMoreBlogs": "عرض المزيد من المدونات",
+    "deactivate": "إلغاء التفعيل",
+    "create": "إنشاء",
+    "update": "تعديل",
+    "delete": "حذف",
+    "view": "عرض",
+    "assign": "تعيين",
+    "back": "رجوع",
+    "next": "التالى",
+    "previous": "السابق",
+    "clear": "مسح",
+    "changePassword": "تغيير كلمة المرور",
+    "save": "حفظ",
+    "confirm": "تأكيد",
+    "edit": "تعديل",
+    "ok": "تم",
+    "done": "تم",
+    "pending": "معلق",
+    "cancel": "إلغاء",
+    "apply": "تطبيق",
+    "download": "تحميل",
+    "submit": "إرسال",
+    "replayed": "تم الرد",
+    "share": "مشاركة",
+    "readMore": "قراءة المزيد",
+    "requestCall": "طلب مكالمة",
+    "send": "إرسال"
+  },
+  "language": {
+    "ar": "ع",
+    "en": "EN"
+  },
+  "profile":{
+    "profile": "الحساب",
+    "home": "الرئيسية",
+    "settings": "الإعدادات",
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "signOut": "تسجيل الخروج"
+  },
+  "table": {
+    "tableOptions": "خيارات الجدول",
+    "tableActions": "الإجراءات",
+    "downloadExcel": "تحميل ملف Excel",
+    "pageReportTemplate": "عرض {{first}} إلى {{last}} من أصل {{totalRecords}} | النتائج فى كل صفحة"
+  },
+  "status":{
+    "pending": "معلق",
+    "replayed": "تم الرد",
+    "done": "تم الرد",
+    "available"  : "متوفر",
+    "sold": "مباع",
+    "active": "فعال",
+    "inactive": "غير فعال"
+  },
+  "messages": {
+    "success": "تم بنجاح",
+    "error": "خطاء",
+    "requestReceivedSuccessfully": "تم استلام الطلب بنجاح",
+    "actionSuccessfully": "تم الإجراء بنجاح"
+  },
+  "inputs": {
+    "chooseFile": "إختر ملف",
+    "imagesAndPdf": "صور و PDF",
+    "images": "صور",
+    "fileMaxSize": "أقصى حجم "
+  },
+  "currencies": {
+    "sr": "ر.س"
+  },
+  "areas": {
+    "m": "م"
+  }
+}

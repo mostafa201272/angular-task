@@ -1,0 +1,237 @@
+<!-- START OF NAVBAR -->
+<nav
+  class="px-6 py-3 fixed top-0 left-0 z-50 w-full"
+  [ngClass]="{
+    'bg-white navbar': navBarScrolled,
+    'bg-transparent': !coloredNavBar
+  }"
+>
+  <!-- START OF NAVBAR CONTAINER -->
+  <div class="container mx-auto flex flex-row items-center justify-between">
+    <!-- START OF BRAND LOGO -->
+    <div class="flex flex-col gap-2 items-center">
+      <!-- START OF LOGO -->
+      <div class="logo">
+        <img
+          class="w-12 md:w-16 xl:w-24"
+          [src]="
+            navBarScrolled || coloredNavbar
+              ? '/assets/images/logo_colored.svg'
+              : '/assets/images/logo_white.svg'
+          "
+        />
+      </div>
+      <!-- END OF LOGO -->
+    </div>
+    <!-- END OF BRAND LOGO -->
+
+    <!-- START OF PAGES -->
+    <div class="flex flex-row items-center gap-4">
+      <!-- START OF PAGES -->
+      <div class="hidden lg:block">
+        <ul class="flex flex-row items-center gap-8 list-none">
+          <li>
+            <a
+              class="font-semibold"
+              [ngClass]="{
+                'text-secondary': navBarScrolled || coloredNavbar,
+                'text-white': !navBarScrolled || !coloredNavbar,
+              }"
+              routerLink="/"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLinkActive]="
+                coloredNavBar ? 'text-primary' : 'text-light-primary'
+              "
+              >{{ "navbar.home" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-semibold"
+              [ngClass]="{
+                'text-secondary': navBarScrolled || coloredNavbar,
+                'text-white': !navBarScrolled || !coloredNavbar,
+              }"
+              routerLink="/buy"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLinkActive]="
+                coloredNavBar ? 'text-primary' : 'text-light-primary'
+              "
+              >{{ "navbar.buy" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-semibold"
+              [ngClass]="{
+                'text-secondary': navBarScrolled || coloredNavbar,
+                'text-white': !navBarScrolled || !coloredNavbar,
+              }"
+              routerLink="/sell"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLinkActive]="
+                coloredNavBar ? 'text-primary' : 'text-light-primary'
+              "
+              >{{ "navbar.sell" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-semibold"
+              [ngClass]="{
+                'text-secondary': navBarScrolled || coloredNavbar,
+                'text-white': !navBarScrolled || !coloredNavbar,
+              }"
+              routerLink="/blog"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLinkActive]="
+                coloredNavBar ? 'text-primary' : 'text-light-primary'
+              "
+              >{{ "navbar.blog" | translate }}</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-semibold"
+              [ngClass]="{
+                'text-secondary': navBarScrolled || coloredNavbar,
+                'text-white': !navBarScrolled || !coloredNavbar,
+              }"
+              routerLink="/contact"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [routerLinkActive]="
+                coloredNavBar ? 'text-primary' : 'text-light-primary'
+              "
+              >{{ "navbar.contact" | translate }}</a
+            >
+          </li>
+        </ul>
+      </div>
+      <!-- END OF PAGES -->
+    </div>
+    <!-- END OF PAGES -->
+
+    <!-- START OF CONTROLS -->
+    <div class="flex flex-row items-center gap-4">
+      <!-- START OF PROFILE -->
+      <div>
+        <app-profile
+          [coloredNavbar]="navBarScrolled || coloredNavbar"
+        ></app-profile>
+      </div>
+      <!-- END OF PROFILE -->
+
+      <!--START OF LANGUAGE SWITCH  -->
+      <button
+        (click)="switchLanguage()"
+        class="flex flex-row items-center gap-2"
+      >
+        <span
+          ><i
+            class="pi pi-language flex"
+            [ngClass]="{
+              'text-white': !navBarScrolled || !coloredNavbar,
+              'text-primary': navBarScrolled || coloredNavbar
+            }"
+          ></i
+        ></span>
+        <span
+          class="text-white font-semibold leading-normal font-[Cairo]"
+          [ngClass]="{
+            'text-white': !navBarScrolled || !coloredNavbar,
+            'text-primary': navBarScrolled || coloredNavbar
+          }"
+        >
+          {{
+            (currentLang === "ar" ? "language.en" : "language.ar") | translate
+          }}</span
+        >
+      </button>
+      <!--END OF LANGUAGE SWITCH  -->
+
+      <!-- START OF SIDE MENU TOGGLER  -->
+      <div class="block lg:hidden">
+        <span
+          (click)="displaySideMenu()"
+          class="cursor-pointer"
+          [ngClass]="{
+            'text-primary': navBarScrolled || coloredNavbar,
+            'text-white': !navBarScrolled || !coloredNavbar
+          }"
+        >
+          <i class="pi pi-align-justify flex"></i>
+        </span>
+      </div>
+      <!-- END OF SIDE MENU TOGGLER  -->
+    </div>
+    <!-- END OF CONTROLS -->
+  </div>
+  <!-- END OF NAVBAR CONTAINER -->
+</nav>
+<!-- END OF NAVBAR -->
+
+<!-- START OF SIDE-MENU [MOBILE VIEW] -->
+<p-sidebar [(visible)]="showSideMenu" [position]="isRtl() ? 'left' : 'right'">
+  <!-- START OF SIDE MENU CONTAINER -->
+  <aside class="flex flex-col gap-4">
+    <!-- START OF LOGO -->
+    <div class="w-full">
+      <div class="flex flex-col justify-center items-center">
+        <span [inlineSVG]="'/assets/images/logo_colored.svg'"></span>
+      </div>
+    </div>
+    <!-- END OF LOGO -->
+
+    <!-- START OF LINKS -->
+    <div class="mt-6">
+      <ul class="flex flex-col items-center gap-8 list-none">
+        <li>
+          <a
+            class="font-semibold text-secondary"
+            routerLink="/"
+            [routerLinkActive]="'text-primary'"
+            >{{ "navbar.home" | translate }}</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-semibold text-secondary"
+            routerLink="/buy"
+            [routerLinkActive]="'text-primary'"
+            >{{ "navbar.buy" | translate }}</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-semibold text-secondary"
+            routerLink="/sell"
+            [routerLinkActive]="'text-primary'"
+            >{{ "navbar.sell" | translate }}</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-semibold text-secondary"
+            routerLink="/blog"
+            [routerLinkActive]="'text-primary'"
+            >{{ "navbar.blog" | translate }}</a
+          >
+        </li>
+        <li>
+          <a
+            class="font-semibold text-secondary"
+            routerLink="/contact"
+            [routerLinkActive]="'text-primary'"
+            >{{ "navbar.contact" | translate }}</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- END OF LINKS -->
+
+    <!-- START OF LOGOUT -->
+    <!-- END OF LOGOUT -->
+  </aside>
+  <!-- END OF SIDE MENU CONTAINER -->
+</p-sidebar>
+<!-- END OF SIDE-MENU [MOBILE VIEW] -->

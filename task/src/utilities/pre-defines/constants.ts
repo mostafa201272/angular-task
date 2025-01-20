@@ -16,16 +16,10 @@ export const DEFAULT_LANGUAGE = 'en';
 /** AUTH */
 export const TOKEN = 'token';
 
-/** YOUTUBE BASE URL */
-export const YOUTUBE_BASE_URL = 'https://www.youtube.com/embed/';
-
-
 // STATUS BADGES
 export const STATUS_BADGES = [
-    { id: 'active', badge: 'badge-completed' },
-    { id: 'replayed', badge: 'badge-completed' },
-    { id: 'done', badge: 'badge-completed' },
-    { id: 'inactive', badge: 'badge-rejected' },
+    { id: 'completed', badge: 'badge-completed' },
+    { id: 'rejected', badge: 'badge-rejected' },
     { id: 'pending', badge: 'badge-warning' },
-    { id: 'sold', badge: 'badge-info' },
+    { id: 'info', badge: 'badge-info' },
   ];

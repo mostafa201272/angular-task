@@ -1,0 +1,38 @@
+{
+  "admin": {
+    "menu": {
+      "superAdminDashboard": "لوحة تحكم مدير النظام",
+      "visitorsViews": "صفحات الزوار",
+      "headerSection": "رأس الصفحة",
+      "allProperties": "كل الوحدات",
+      "home": "الرئيسية",
+      "aboutSection": "عن بهره",
+      "blogsSection": "المدونة",
+      "financeSolutionSection": "الحلول المالية",
+      "propertiesSection": "الوحدات",
+      "whyBuhrahSection": "لماذا بهرة",
+      "blog": "المدونة",
+      "blogView": "المدونة",
+      "allBlogs": "كل التدوينات",
+      "sell": "بيع",
+      "aboutSellSection": "عن البيع",
+      "howToSellSection": "كيف تبيع",
+      "howToSellSteps": "خطوات البيع",
+      "quoteSection": "الإقتباس",
+      "buy": "شراء",
+      "contact": "تواصل معنا",
+      "privacy": "سياسة الخصوصية",
+      "services": "الخدمات",
+      "properties": "الوحدات",
+      "propertiesCalls": "طلبات المكالمات",
+      "propertiesTypes": "انواع الوحدات",
+      "locations": "المواقع",
+      "countries": "الدول",
+      "cities": "المدن",
+      "residentialNeighborhoods": "الأحياء",
+      "streets": "الشوارع",
+      "requestsView": "الطلبات",
+      "financeSolutionRequests": "طلبات الحلول المالية"
+    }
+  }
+}

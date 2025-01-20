@@ -1,0 +1,80 @@
+{
+  "admin": {
+    "visitors": {
+      "common": {
+        "id": "ID",
+        "name": "Name",
+        "phone": "Phone",
+        "title":  "English Title",
+        "title_en":  "English Title",
+        "name_english": "English Title",
+        "title_ar": "Arabic Title",
+        "name_arabic": "Arabic Title",
+        "subtitle": "English Subtitle",
+        "subtitle_ar": "Arabic Subtitle",
+        "description_ar": "Arabic Description",
+        "description": "English Description",
+        "short_description_en": "English Short Description",
+        "short_description_ar": "Arabic Short Description",
+        "long_description_en": "English Long Description",
+        "long_description_ar": "Arabic Long Description",
+        "first_description_en": "1st English Description",
+        "first_description_ar": "1st Arabic Description",
+        "second_description_en": "2nd English Description",
+        "second_description_ar": "2nd Arabic Description",
+        "property": "Property",
+        "call_date": "Call Date",
+        "call_time_range": "Call Time Range",
+        "requestCall": "Request Call",
+        "video_code": "Video Code",
+        "video_url": "Video URL",
+        "background_image": "Background Image",
+        "image": "The Image",
+        "header_image": "Cover Image",
+        "status": "Status",
+        "created_at": "Creation Time",
+        "updated_at": "Last Update"
+      },
+      "home": {
+        "id": "ID",
+        "title": "English Title",
+        "title_ar": "Arabic Title",
+        "subtitle": "English Subtitle",
+        "subtitle_ar": "Arabic Subtitle",
+        "description_ar": "Arabic Description",
+        "description": "English Description",
+        "video_code": "Video Code",
+        "video_url": "Video URL",
+        "background_image": "Background Image",
+        "image": "The Image",
+        "status": "Status",
+        "created_at": "Creation Time",
+        "updated_at": "Last Update"
+      }
+    },
+    "requests": {
+      "financeSolutionRequests": {
+        "id": "ID",
+        "fullName": "Full Name",
+        "birthDate": "Birth Date",
+        "phone": "Phone",
+        "email": "Email",
+        "sector": "Sector",
+        "totalSalary": "Total Salary",
+        "netSalary": "Net Salary",
+        "residentialSubsidy": "Residential Subsidy",
+        "replyMethod": "Reply Method",
+        "status": "Status",
+        "created_at": "Created Time",
+        "updated_at": "Updated Time",
+        "whatsApp": "WhatsApp",
+        "whatsapp": "WhatsApp",
+        "obligations": "Obligations",
+        "governmental": "Governmental",
+        "private": "Private",
+        "supported": "Supported",
+        "not_supported": "Not supported"
+      }
+    }
+  }
+}

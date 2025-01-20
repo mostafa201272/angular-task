@@ -1,0 +1,37 @@
+{
+  "admin": {
+    "menu": {
+      "superAdminDashboard": "Super Admin Dashboard",
+      "visitorsViews": "Visitors Pages",
+      "headerSection": "Header",
+      "aboutSection": "About",
+      "blogsSection": "Blogs",
+      "financeSolutionSection": "Finance Solution",
+      "propertiesSection": "Properties",
+      "whyBuhrahSection": "Why Buhrah",
+      "blog": "Blog",
+      "blogView": "Blog",
+      "allBlogs": "All Blog",
+      "sell": "Sell",
+      "aboutSellSection": "About Sell",
+      "howToSellSection": "How To Sell",
+      "howToSellSteps": "Sell Steps",
+      "quoteSection": "Quote",
+      "buy": "Buy",
+      "contact": "Contact",
+      "privacy": "Privacy and policy",
+      "services": "Services",
+      "properties": "Properties",
+      "propertiesCalls": "Calls Requests",
+      "propertiesTypes": "Properties Types",
+      "allProperties": "All Properties",
+      "locations": "Locations",
+      "countries": "Countries",
+      "cities": "Cities",
+      "residentialNeighborhoods": "Residential Neighborhoods",
+      "streets": "Streets",
+      "requestsView": "Requests",
+      "financeSolutionRequests": "Finance Solution Requests"
+    }
+  }
+}

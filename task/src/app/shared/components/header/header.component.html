@@ -1,0 +1,30 @@
+<!-- START OF NAVBAR -->
+<app-nav-bar [coloredNavbar]="coloredNavbar"></app-nav-bar>
+<!-- END OF NAVBAR -->
+
+<!-- START OF HEADER -->
+<header class="w-full min-h-72" [ngClass]="{ 'h-screen': fullScreen }">
+  <!-- START OF BANNER -->
+  <div class="w-full h-full relative">
+    <!-- START OF BANNER IMAGE -->
+    <div class="w-full h-full absolute top-0 left-0 z-0">
+      <img
+        class="w-full h-full object-cover"
+        [src]="headerBackground"
+      />
+    </div>
+    <!-- END OF BANNER IMAGE -->
+
+    <!-- START OF OVERLAY -->
+    <div class="w-full h-full header-overlay relative z-10 min-h-72 py-36" [ngClass]="{'white': !coloredOverlay, 'colored': coloredOverlay}">
+      <!-- START OF OVERLAY EXTERNAL CONTENT CONTAINER -->
+      <diV class="w-full h-full flex items-center justify-center">
+        <ng-content select=".header-external-content"></ng-content>
+      </diV>
+      <!-- END OF OVERLAY EXTERNAL CONTENT CONTAINER -->
+    </div>
+    <!-- END OF OVERLAY -->
+  </div>
+  <!-- END OF BANNER -->
+</header>
+<!-- END OF HEADER -->

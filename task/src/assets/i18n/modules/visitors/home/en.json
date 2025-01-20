@@ -1,0 +1,47 @@
+{
+  "visitors": {
+    "common": {
+      "headerLabel": "Find your exceptional property with",
+      "buhrah": "Buhrah",
+      "discoverNewHomes": "Discover New Homes",
+      "bedrooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "total_area": "Total Area",
+      "fullName": "Full Name",
+      "birthDate": "Birth Date",
+      "phone": "Phone",
+      "email": "E-mail",
+      "whatsApp": "WhatsApp",
+      "sector": "Sector",
+      "totalSalary": "Total Salary",
+      "netSalary": "Net Salary",
+      "residentialSubsidy": "Residential Subsidy",
+      "obligations": "Obligations",
+      "replyMethod": "Reply Method",
+      "governmental": "Governmental",
+      "private": "Private",
+      "supported": "Supported",
+      "not_supported": "Not supported"
+    },
+    "home": {
+      "headerLabel": "Find your exceptional property with",
+      "buhrah": "Buhrah",
+      "discoverNewHomes": "Discover New Homes",
+      "fullName": "Full Name",
+      "birthDate": "Birth Date",
+      "phone": "Phone",
+      "email": "E-mail",
+      "whatsApp": "WhatsApp",
+      "sector": "Sector",
+      "totalSalary": "Total Salary",
+      "netSalary": "Net Salary",
+      "residentialSubsidy": "Residential Subsidy",
+      "obligations": "Obligations",
+      "replyMethod": "Reply Method",
+      "governmental": "Governmental",
+      "private": "Private",
+      "supported": "Supported",
+      "not_supported": "Not supported"
+    }
+  }
+}
